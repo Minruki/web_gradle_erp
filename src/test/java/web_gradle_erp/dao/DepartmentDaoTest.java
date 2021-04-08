@@ -1,6 +1,5 @@
 package web_gradle_erp.dao;
 
-
 import java.sql.Connection;
 import java.util.List;
 
@@ -18,25 +17,22 @@ import web_gradle_erp.dto.Department;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class DepartmentDaoTest {
-	
-	
+
 	private static Connection con;
-	private static DepartmentDao dao = DepartmentDaoImpl.getInstance();
-	
-	
-	@BeforeClass	
-	public static void setUpBeforeClass() throws Exception {		
-		con = JdbcUtil.getConnection();		
-		((DepartmentDaoImpl)dao).setCon(con);
-		
-	} 	
-	
-	@AfterClass	
-	public static void tearDownAfterClass() throws Exception {
-		con.close();	
+	private static DepartmentDaoImpl dao = DepartmentDaoImpl.getInstance();
+
+	@BeforeClass
+	public static void setUpBeforeClass() throws Exception {
+		con = JdbcUtil.getConnection();
+		dao.setCon(con);
+
 	}
-	
-	
+
+	@AfterClass
+	public static void tearDownAfterClass() throws Exception {
+		con.close();
+	}
+
 	@After
 	public void tearDown() throws Exception {
 		System.out.println();

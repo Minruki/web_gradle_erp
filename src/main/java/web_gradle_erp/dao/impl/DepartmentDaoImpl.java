@@ -10,24 +10,24 @@ import java.util.List;
 import web_gradle_erp.dao.DepartmentDao;
 import web_gradle_erp.dto.Department;
 
-
-
 public class DepartmentDaoImpl implements DepartmentDao {
-	private static final DepartmentDaoImpl instance = new DepartmentDaoImpl();
+	private Connection con;
+	
+	public void setCon(Connection con) {
+		this.con = con;
+	}
 
+	
+	
+	private static final DepartmentDaoImpl instance = new DepartmentDaoImpl();
+	
 	public static DepartmentDaoImpl getInstance() {
 		return instance;
 	}
 
-	private Connection con;
-
 	private DepartmentDaoImpl() {
-		// TODO Auto-generated constructor stub
 	}
 
-	public void setCon(Connection con) {
-		this.con = con;
-	}
 
 	@Override
 	public List<Department> selectDepartmentByAll() {
