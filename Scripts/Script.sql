@@ -1,5 +1,3 @@
-delete from employee;
-delete from title;
 
 INSERT INTO DEPARTMENT VALUES(1, '영업', 8);
 INSERT INTO DEPARTMENT VALUES(2, '기획', 10);
