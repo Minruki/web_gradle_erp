@@ -18,7 +18,7 @@ public class Employee {
 	public Employee(int empNo) {
 		this.empNo = empNo;
 	}
-
+	
 	
 	public Employee(int empNo, String empName, Title title, Employee manager, int salary, Department dept,
 			Date hireDate) {
@@ -89,11 +89,16 @@ public class Employee {
 	public void setHireDate(Date hireDate) {
 		this.hireDate = hireDate;
 	}
+//
+//	@Override
+//	public String toString() {
+//		return String.format("%s(%s)", empName, empNo);
+//	}
 
 	@Override
 	public String toString() {
-		return "Employee [empNo=" + empNo + ", empName=" + empName + ", title=" + title + ", manager=" + manager
-				+ ", salary=" + salary + ", dept=" + dept + ", hireDate=" + hireDate + "]";
+		return String.format("Employee [empNo=%s, empName=%s, title=%s, manager=%s, salary=%s, dept=%s, hireDate=%s]",
+				empNo, empName, title, manager, salary, dept, hireDate);
 	}
 
 

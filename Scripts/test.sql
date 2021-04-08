@@ -79,3 +79,12 @@ select e.empno
       select * from vw_full_employee_test2;
       
      empno, empname, hiredate, title_no, title_name, manager_no, manager_name, salary, deptNo, deptName, floor
+     
+    
+    select empno, empname, title as title_no, manager as manager_no, salary, dept as deptNo, hiredate from employee where empno = "1003";
+    
+   
+   
+   
+   	select empno, empname, title_no, title_name, manager_no, manager_name, salary, deptNo, deptName, floor, hiredate from vw_full_employee_test2;
+     

@@ -35,8 +35,8 @@ public class EmployeeDaoImpl implements EmployeeDao {
 
 	@Override
 	public List<Employee> selectEmployeeByAll() {
-		String sql = "select empno, empname, hiredate, title_no, title_name, manager_no, "
-				+ "       manager_name, salary, deptNo, deptName, floor" + "  from vw_full_employee_test2";
+		String sql = "select empno, empname, title_no, title_name, manager_no, "
+				+ "       manager_name, salary, deptNo, deptName, floor, hiredate" + "  from vw_full_employee_test2";
 		try (PreparedStatement pstmt = con.prepareStatement(sql); ResultSet rs = pstmt.executeQuery()) {
 			if (rs.next()) {
 				List<Employee> list = new ArrayList<>();
